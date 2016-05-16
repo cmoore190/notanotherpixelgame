@@ -5,9 +5,9 @@ Player player;
 PImage background;
 
 void setup() {
-  background = loadImage("backgroundImage.jpg");
-  background.resize(500,500);
   size(500,500);
+  background = loadImage("http://2.bp.blogspot.com/-XqwVEVV2Jqs/UB71SXGyHXI/AAAAAAAAAtw/wU0LTHrac8U/s1600/tileset5d.png");
+  background.resize(500,500);
   frameRate(60);
   player = new Player("hitler", x, y, 30);
   System.out.println(player.getName());
