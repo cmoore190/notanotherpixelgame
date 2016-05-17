@@ -12,7 +12,9 @@ void setup() {
   background.resize(500,500);
   frameRate(60);
   handler.addObject(player = new Player("hitler", x, y, 30, ID.Player));
-  handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
+  handler.addObject(new BasicEnemy(16,16,ID.Enemy));
+  //Testing enemies atm
+  //handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
   System.out.println(player.getName());
 }
 void draw() {
