@@ -2,6 +2,7 @@ int velX = 0, velY = 0;
 int x = 250, y = 250;
 boolean[] keyDown  = new boolean[]{false, false, false, false};
 Player player;
+Sword sword;
 PImage background;
 Handler handler = new Handler();
 
@@ -11,6 +12,7 @@ void setup() {
   background.resize(500,500);
   frameRate(60);
   handler.addObject(player = new Player("hitler", x, y, 30, ID.Player));
+  handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
   System.out.println(player.getName());
 }
 void draw() {
