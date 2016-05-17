@@ -12,7 +12,7 @@ class Player extends GameObject{
     player.setX(player.getX() + velX);
     player.setY(player.getY() + velY);
     
-    player.setX(RPG2.clamp(x, 0, width - 32));
+    player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
   }
   
