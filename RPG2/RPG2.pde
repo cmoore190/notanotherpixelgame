@@ -4,7 +4,7 @@ boolean[] keyDown  = new boolean[]{false, false, false, false};
 Player player;
 PImage background;
 Handler handler = new Handler();
-lol
+
 void setup() {
   size(500,500);
   background = loadImage("http://2.bp.blogspot.com/-XqwVEVV2Jqs/UB71SXGyHXI/AAAAAAAAAtw/wU0LTHrac8U/s1600/tileset5d.png");
