@@ -21,6 +21,18 @@ public class Handler {
     this.object.remove(object);
   }
   
+  public void removeObjectsWTag(ID id) {
+        for(int i = 0; i < object.size(); i++) {
+      GameObject tempObject = object.get(i);
+      
+     if(tempObject.getID() == id) {
+       removeObject(tempObject);
+       i--;
+     }
+      
+    }
+  }
+  
   public void removeAllObjects() {
     for(int i = this.object.size() - 1; i >= 0; i--) {
       GameObject tempObject = this.object.get(i);

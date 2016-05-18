@@ -11,8 +11,9 @@ void setup() {
   background = loadImage("http://2.bp.blogspot.com/-XqwVEVV2Jqs/UB71SXGyHXI/AAAAAAAAAtw/wU0LTHrac8U/s1600/tileset5d.png");
   background.resize(500,500);
   frameRate(60);
+  handler.addObject(new BasicEnemy(16,16,ID.Enemy));
   handler.addObject(player = new Player("hitler", x, y, 30, ID.Player));
-  handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
+  handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Player));
   System.out.println(player.getName());
 }
 void draw() {
@@ -26,7 +27,7 @@ void keyPressed() {
   if(keyCode == DOWN && !keyDown[1]) {player.setVelY(3); keyDown[1] = true;}
   if(keyCode == LEFT && !keyDown[2]) {player.setVelX(-3); keyDown[2] = true;}
   if(keyCode == RIGHT && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
-  if(keyCode == 32){handler.removeObject(player);}
+  if(keyCode == 32){handler.removeObjectsWTag(ID.Player);}
 }
 
 void keyReleased() {

@@ -8,12 +8,14 @@ class Player extends GameObject{
   }
   
   public void tick() {
+    fill(255,255,255);
     rect(player.getX(), player.getY(), player.getSize(), player.getSize());
     player.setX(player.getX() + velX);
     player.setY(player.getY() + velY);
     
     player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
+    
   }
   
   public String getName(){
