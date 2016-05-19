@@ -11,8 +11,8 @@ void setup() {
   background = loadImage("http://2.bp.blogspot.com/-XqwVEVV2Jqs/UB71SXGyHXI/AAAAAAAAAtw/wU0LTHrac8U/s1600/tileset5d.png");
   background.resize(500,500);
   frameRate(60);
-  handler.addObject(new BasicEnemy(16,16,ID.Enemy));
   handler.addObject(player = new Player("hitler", x, y, 30, ID.Player));
+  handler.addObject(new BasicEnemy(16,16,ID.Enemy));
   handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Player));
   System.out.println(player.getName());
 }
