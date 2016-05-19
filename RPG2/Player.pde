@@ -1,16 +1,15 @@
 class Player extends GameObject{
   private String name;
-  private int Health=100, size;
-  public Player(String name, int x, int y, int size, ID id) {
-    super(x, y,id);
+  private int Health=100;
+  public Player(String name, int x, int y, ID id, int xSize, int ySize) {
+    super(x, y,id, xSize, ySize);
     this.name = name;
-    this.size = size;
   }
   
   public void tick() {
     Collision coll = new Collision(handler);
     fill(255,255,255);
-    rect(player.getX(), player.getY(), player.getSize(), player.getSize());
+    rect(player.getX(), player.getY(), player.getXSize(), player.getYSize());
     player.setX(player.getX() + velX);
     player.setY(player.getY() + velY);
     
@@ -24,10 +23,6 @@ class Player extends GameObject{
   
   public String getName(){
     return name;
-  }
-  
-  public int getSize(){
-    return size;
   }
   public int getHealth(){
    return Health;  

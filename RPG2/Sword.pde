@@ -1,6 +1,6 @@
 class Sword extends GameObject{
-   public Sword(int x, int y, ID id) {
-      super(x, y, id);
+   public Sword(int x, int y, ID id, int xSize, int ySize) {
+      super(x, y, id, xSize, ySize);
   }  
   
   public void tick(){ 
