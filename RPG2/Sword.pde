@@ -5,6 +5,7 @@ class Sword extends GameObject{
   
   public void tick(){ 
     //Remove the velocity to add a swaying effect
+    fill(255,255,255);
     rect(player.getX() + 13 - player.getVelX(), player.getY() - 15 - player.getVelY(), 5, 15);
   }
   

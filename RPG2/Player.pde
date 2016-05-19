@@ -14,6 +14,7 @@ class Player extends GameObject{
     player.setY(player.getY() + velY);
     player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
+    checkBoxes(
     noFill();
     
     //text(name + ":"+ Health, player.getX() - velX, player.getY() - velY);
