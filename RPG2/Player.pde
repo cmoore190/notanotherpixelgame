@@ -7,6 +7,7 @@ class Player extends GameObject{
   }
   
   public void tick() {
+    Collision coll = new Collision(handler);
     fill(255,255,255);
     rect(player.getX(), player.getY(), player.getXSize(), player.getYSize());
     player.setX(player.getX() + velX);
@@ -14,6 +15,9 @@ class Player extends GameObject{
     
     player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
+    
+    GameObject obj = coll.getClosest(player);
+    System.out.println(obj + " "+ obj.getX() + " "+ obj.getY());
     
   }
   

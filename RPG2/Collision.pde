@@ -1,3 +1,8 @@
+  class Collision{
+    Handler handler;
+    public Collision(Handler handler) {
+      this.handler = handler;
+    }
   /*
   Work on comparing 
   if two boxes are touching 
@@ -10,5 +15,25 @@
         return true;
       }
     }
-    return false;
+  //Gets the closest object with this tag
+  public GameObject getClosest(GameObject object) {
+    double lowest = Double.MAX_VALUE;
+    GameObject obj = null;
+    GameObject tempObject;
+    for(int i = 0; i < handler.object.size(); i++) {
+      if(object == handler.object.get(i)){
+        i++;
+      }
+      tempObject = handler.object.get(i);
+      
+      if(lowest > Math.hypot(object.getX()-tempObject.getX(), object.getY()-tempObject.getY())) {
+        lowest = Math.hypot(object.getX()-tempObject.getX(), object.getY()-tempObject.getY());
+        obj = tempObject;
+      }
+      else {
+        return tempObject;
+      }
+    }
+    return obj;
+  }
   }
