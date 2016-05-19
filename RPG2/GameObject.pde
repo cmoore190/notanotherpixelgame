@@ -2,11 +2,15 @@ public abstract class GameObject {
   protected int x, y;
   protected ID id;
   protected int velX, velY;
+  protected int xSize;
+  protected int ySize;
   
-  public GameObject(int x, int y, ID id) {
+  public GameObject(int x, int y, ID id, int xSize, int ySize) {
     this.x = x;
     this.y = y;
     this.id = id;
+    this.xSize= xSize;
+    this.ySize = ySize;
   }  
   
   public abstract void tick();
@@ -40,5 +44,11 @@ public abstract class GameObject {
   }
   public int getVelY() {
     return velY;
+  }
+  public int getXSize(){
+    return xSize;
+  }
+  public int getYSize(){
+    return ySize;
   }
 }
