@@ -17,6 +17,7 @@ class Player extends GameObject{
     //text(name + ":"+ Health, player.getX() - velX, player.getY() - velY);
     GameObject obj = coll.getClosest(player);
     System.out.println(obj + " "+ obj.getX() + " "+ obj.getY());
+    System.out.println(coll.checkColl(player, obj));
    
   }
   
