@@ -54,4 +54,24 @@
     }
     return obj;
   }
+  
+  public GameObject getClosestWTag(GameObject object, ID id) {
+    double lowest = Double.MAX_VALUE;
+    GameObject obj = null;
+    GameObject tempObject;
+    for(int i = 0; i < handler.object.size(); i++) {
+      if(handler.object.get(i).getID() == id){
+        System.out.println(handler.object.get(i).getID());
+          tempObject = handler.object.get(i);
+          if(lowest > Math.hypot(object.getX()-tempObject.getX(), object.getY()-tempObject.getY())) {
+            lowest = Math.hypot(object.getX()-tempObject.getX(), object.getY()-tempObject.getY());
+            obj = tempObject;
+          }
+          else {
+             return tempObject;
+          }
+      }
+    }
+    return obj;
+  }
   }
