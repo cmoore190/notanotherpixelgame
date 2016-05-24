@@ -1,4 +1,4 @@
-
+/*
 public class Inventory
 {
   HashMap<String,ArrayList<Item>> items = new HashMap<String,ArrayList<Item>>();
@@ -24,3 +24,4 @@ public class Inventory
      if(itemGroup.size()) == 0;
      items.remove(name);
   }}
+  */

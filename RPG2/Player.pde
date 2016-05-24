@@ -16,8 +16,8 @@ class Player extends GameObject{
     player.setY(RPG2.clamp(y, 0, height - 28));
     //text(name + ":"+ Health, player.getX() - velX, player.getY() - velY);
     GameObject obj = coll.getClosestWTag(sword, ID.Enemy);
-    System.out.println(coll.checkColl(sword, obj));
-   
+    if(coll.checkColl(sword, obj))
+      handler.removeObject(obj);
   }
   
   public String getName(){
