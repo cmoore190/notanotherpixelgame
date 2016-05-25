@@ -14,12 +14,16 @@ class Player extends GameObject{
     player.setY(player.getY() + velY);
     player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
-    //text(name + ":"+ Health, player.getX() - velX, player.getY() - velY);
+    text(name + ":"+ Health, player.getX() - velX - 10, player.getY() - velY+(2*size+10));
     GameObject obj = coll.getClosestWTag(sword, ID.Enemy);
     if(obj == null)
     obj = sword;
     if(coll.checkColl(sword, obj) && obj != sword)
       handler.removeObject(obj);
+    if(coll.checkColl(player, obj) && obj != sword){
+      player.setVelX(0);
+      player.setVelY(0); 
+    }
   }
   
   public String getName(){
