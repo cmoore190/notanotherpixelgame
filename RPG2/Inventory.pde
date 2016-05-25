@@ -28,6 +28,8 @@ public class Inventory
 
      if(itemGroup.size() == 0);
      items.remove(rName);
-  }}
+  }
+}
   
+
   
