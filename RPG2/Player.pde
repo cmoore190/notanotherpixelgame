@@ -18,7 +18,7 @@ class Player extends GameObject{
     GameObject obj = coll.getClosestWTag(sword, ID.Enemy);
     if(obj == null)
     obj = sword;
-    if(coll.checkColl(sword, obj))
+    if(coll.checkColl(sword, obj) && obj != sword)
       handler.removeObject(obj);
   }
   
