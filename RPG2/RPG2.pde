@@ -9,7 +9,7 @@ Collision coll = new Collision(handler);
 
 void setup() {
   size(500,500);
-  background = loadImage("http://2.bp.blogspot.com/-XqwVEVV2Jqs/UB71SXGyHXI/AAAAAAAAAtw/wU0LTHrac8U/s1600/tileset5d.png");
+  background = loadImage("https://newevolutiondesigns.com/images/freebies/space-wallpaper-29.jpg");
   background.resize(500,500);
   frameRate(60);;
   //Testing enemies atm
