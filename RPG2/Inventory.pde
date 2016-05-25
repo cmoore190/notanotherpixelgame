@@ -3,7 +3,7 @@
 
 import java.util.*;
 
->>>>>>> FETCH_HEAD
+
 public class Inventory
 {
   
