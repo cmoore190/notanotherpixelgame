@@ -9,16 +9,6 @@
   if two boxes are touching 
   and return true or false
   */
-
-  public boolean checkBoxes(GameObject object1, GameObject object2){
-    if(object1.getX() > object2.getX() && object1.getX() < object2.getX() + object2.getXSize()){
-      if(object1.getY() > object2.getY() && object2.getX() < object2.getY() + object2.getYSize()){
-        return true;
-      }
-    }
-    return false;
-    }
-    
     
     public boolean checkColl(GameObject ob1, GameObject ob2) {
   
@@ -59,6 +49,7 @@
     double lowest = Double.MAX_VALUE;
     GameObject obj = null;
     GameObject tempObject;
+    
     for(int i = 0; i < handler.object.size(); i++) {
       if(handler.object.get(i).getID() == id){
         //System.out.println(handler.object.get(i).getID());
