@@ -5,6 +5,7 @@ Player player;
 Sword sword;
 PImage background;
 Handler handler = new Handler();
+Collision coll = new Collision(handler);
 
 void setup() {
   size(500,500);
@@ -25,18 +26,19 @@ void draw() {
 }
 
 void keyPressed() {
-  if(keyCode == UP && !keyDown[0]) {player.setVelY(-3); keyDown[0] = true;}
-  if(keyCode == DOWN && !keyDown[1]) {player.setVelY(3); keyDown[1] = true;}
-  if(keyCode == LEFT && !keyDown[2]) {player.setVelX(-3); keyDown[2] = true;}
-  if(keyCode == RIGHT && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
+  if(keyCode == 87 && !keyDown[0]) {player.setVelY(-3); keyDown[0] = true;}
+  if(keyCode == 83 && !keyDown[1]) {player.setVelY(3); keyDown[1] = true;}
+  if(keyCode == 65 && !keyDown[2]) {player.setVelX(-3); keyDown[2] = true;}
+  if(keyCode == 68 && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
+  if(keyCode == LEFT){}
   if(keyCode == 32){handler.removeObjectsWTag(ID.Player);}
 }
 
 void keyReleased() {
-  if(keyCode == UP) {player.setVelY(0); keyDown[0] = false;} 
-  if(keyCode == DOWN) {player.setVelY(0); keyDown[1] = false;} 
-  if(keyCode == LEFT) {player.setVelX(0); keyDown[2] = false;}
-  if(keyCode == RIGHT) {player.setVelX(0); keyDown[3] = false;} 
+  if(keyCode == 87) {player.setVelY(0); keyDown[0] = false;} 
+  if(keyCode == 83) {player.setVelY(0); keyDown[1] = false;} 
+  if(keyCode == 65) {player.setVelX(0); keyDown[2] = false;}
+  if(keyCode == 68) {player.setVelX(0); keyDown[3] = false;} 
 }
 
 public static int clamp(int val, int min, int max) {

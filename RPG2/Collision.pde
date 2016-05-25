@@ -23,7 +23,7 @@
     public boolean checkColl(GameObject ob1, GameObject ob2) {
   
   // test for collision
-  if (ob1.getX()+ob1.getXSize()/4 >= ob2.getX()-ob2.getXSize()/4 && ob1.getX()-ob1.getXSize()/4 <= ob2.getX()+ob2.getXSize()/4 && ob1.getY()+ob1.getYSize()/4 >= ob2.getY()-ob2.getYSize()/2 && ob1.getY()-ob1.getYSize()/2 <= ob2.getY()+ob2.getYSize()/2) {
+  if (ob1.getX()+ob1.getXSize()/2 >= ob2.getX()-ob2.getXSize()/2 && ob1.getX()-ob1.getXSize()/2 <= ob2.getX()+ob2.getXSize()/2 && ob1.getY()+ob1.getYSize()/2 >= ob2.getY()-ob2.getYSize()/2 && ob1.getY()-ob1.getYSize()/2 <= ob2.getY()+ob2.getYSize()/2) {
     return true;    // if a hit, return true
   }
   else {            // if not, return false
@@ -61,7 +61,7 @@
     GameObject tempObject;
     for(int i = 0; i < handler.object.size(); i++) {
       if(handler.object.get(i).getID() == id){
-        System.out.println(handler.object.get(i).getID());
+        //System.out.println(handler.object.get(i).getID());
           tempObject = handler.object.get(i);
           if(lowest > Math.hypot(object.getX()-tempObject.getX(), object.getY()-tempObject.getY())) {
             lowest = Math.hypot(object.getX()-tempObject.getX(), object.getY()-tempObject.getY());

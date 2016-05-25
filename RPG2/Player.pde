@@ -7,7 +7,7 @@ class Player extends GameObject{
   }
   
   public void tick() {
-    Collision coll = new Collision(handler);
+    
     fill(255,255,255);
     rect(player.getX(), player.getY(), player.getXSize(), player.getYSize());
     player.setX(player.getX() + velX);
@@ -16,6 +16,8 @@ class Player extends GameObject{
     player.setY(RPG2.clamp(y, 0, height - 28));
     //text(name + ":"+ Health, player.getX() - velX, player.getY() - velY);
     GameObject obj = coll.getClosestWTag(sword, ID.Enemy);
+    if(obj == null)
+    obj = sword;
     if(coll.checkColl(sword, obj))
       handler.removeObject(obj);
   }
