@@ -1,10 +1,7 @@
 
 import java.util.*;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> FETCH_HEAD
 public class Inventory
 {
   
@@ -33,9 +30,4 @@ public class Inventory
      items.remove(rName);
   }}
   
-
-     if(itemGroup.size() == 0);
-     items.remove(rName);
-    
-  }} 
   
