@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 /*
-=======
+
 import java.util.*;
 
 >>>>>>> FETCH_HEAD
@@ -27,15 +27,15 @@ public class Inventory
      if(itemGroup==null) return;
      itemGroup.remove(rName);
      // remove an empty group
-<<<<<<< HEAD
+
      if(itemGroup.size()) == 0;
      items.remove(name);
   }}
-  */
-=======
+  
+
      if(itemGroup.size() == 0);
      items.remove(rName);
     
   }} 
   
->>>>>>> FETCH_HEAD
+*/
