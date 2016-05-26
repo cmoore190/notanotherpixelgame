@@ -18,12 +18,11 @@ class Player extends GameObject{
     GameObject obj = coll.getClosestWTag(gun, ID.Enemy);
     if(obj == null)
     obj = gun;
-    if(coll.checkColl(gun, obj))
+    if(coll.checkColl(gun, obj) && obj != gun){
       handler.removeObject(obj);
-    if(coll.checkColl(player, obj) && obj != gun){
-      player.setVelX(0);
-      player.setVelY(0); 
+      gun.setAvailable(true);
     }
+
   }
   
   public String getName(){

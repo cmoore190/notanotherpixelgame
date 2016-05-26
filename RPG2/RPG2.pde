@@ -32,7 +32,7 @@ void keyPressed() {
   if(keyCode == 68 && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
   if(keyCode == LEFT){}
   //if(keyCode == 32){handler.removeObjectsWTag(ID.Player);}
-  if(keyCode == 32){gun.setVelY(4);}
+  if(keyCode == 32){gun.setAvailable(false);}
   
 }
 
