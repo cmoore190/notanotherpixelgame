@@ -31,7 +31,13 @@ void keyPressed() {
   if(keyCode == 65 && !keyDown[2]) {player.setVelX(-3); keyDown[2] = true;}
   if(keyCode == 68 && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
   if(keyCode == LEFT){}
-  if(keyCode == 32){handler.removeObjectsWTag(ID.Player);}
+<<<<<<< HEAD
+  if(keyCode == 32){gun.Available(false); System.out.println("asd");}
+=======
+  //if(keyCode == 32){handler.removeObjectsWTag(ID.Player);}
+  if(keyCode == 32){gun.setVelY(4);}
+  
+>>>>>>> FETCH_HEAD
 }
 
 void keyReleased() {

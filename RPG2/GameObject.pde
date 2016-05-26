@@ -4,6 +4,7 @@ public abstract class GameObject {
   protected int velX, velY;
   protected int xSize;
   protected int ySize;
+  protected boolean Available;
   
   public GameObject(int x, int y, ID id, int xSize, int ySize) {
     this.x = x;
@@ -50,5 +51,12 @@ public abstract class GameObject {
   }
   public int getYSize(){
     return ySize;
+  }
+  public void Available(boolean statement){
+    Available = statement;
+  }
+  
+  public boolean isAvailable(){
+    return Available;
   }
 }

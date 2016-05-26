@@ -1,7 +1,10 @@
 class Player extends GameObject{
   private String name;
-  private int Health=100;
+<<<<<<< HEAD
   private int lifes = 0;
+=======
+  private int lifes = 3;
+>>>>>>> FETCH_HEAD
   public Player(String name, int x, int y, ID id, int xSize, int ySize) {
     super(x, y,id, xSize, ySize);
     this.name = name;
@@ -15,15 +18,17 @@ class Player extends GameObject{
     player.setY(player.getY() + velY);
     player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
-    text(name + ":"+ Health, player.getX() - velX - 10, player.getY() - velY+(2*size+10));
+<<<<<<< HEAD
+    //text(name + ":"+ Lives, player.getX() - velX - 10, player.getY() - velY+(2*size+10));
+=======
+    text(name + ":"+ lifes, player.getX() - velX - 10, player.getY() - velY+(2*size+10));
+>>>>>>> FETCH_HEAD
     GameObject obj = coll.getClosestWTag(gun, ID.Enemy);
     if(obj == null)
     obj = gun;
-    if(coll.checkColl(gun, obj))
+    if(coll.checkColl(gun, obj) && obj != gun){
       handler.removeObject(obj);
-    if(coll.checkColl(player, obj) && obj != gun){
-      player.setVelX(0);
-      player.setVelY(0); 
+      gun.Available(true);
     }
   }
   
