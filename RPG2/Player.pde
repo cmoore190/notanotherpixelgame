@@ -1,6 +1,7 @@
 class Player extends GameObject{
   private String name;
   private int Health=100;
+  private int lifes = 0;
   public Player(String name, int x, int y, ID id, int xSize, int ySize) {
     super(x, y,id, xSize, ySize);
     this.name = name;
@@ -15,12 +16,12 @@ class Player extends GameObject{
     player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
     text(name + ":"+ Health, player.getX() - velX - 10, player.getY() - velY+(2*size+10));
-    GameObject obj = coll.getClosestWTag(sword, ID.Enemy);
+    GameObject obj = coll.getClosestWTag(gun, ID.Enemy);
     if(obj == null)
-    obj = sword;
-    if(coll.checkColl(sword, obj) && obj != sword)
+    obj = gun;
+    if(coll.checkColl(gun, obj))
       handler.removeObject(obj);
-    if(coll.checkColl(player, obj) && obj != sword){
+    if(coll.checkColl(player, obj) && obj != gun){
       player.setVelX(0);
       player.setVelY(0); 
     }
@@ -29,7 +30,7 @@ class Player extends GameObject{
   public String getName(){
     return name;
   }
-  public int getHealth(){
-   return Health;  
+  public int getLives(){
+   return lifes;  
   }
 }

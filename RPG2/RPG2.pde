@@ -2,7 +2,7 @@ int velX = 0, velY = 0;
 int x = 250, y = 250;
 boolean[] keyDown  = new boolean[]{false, false, false, false};
 Player player;
-Sword sword;
+Gun gun;
 PImage background;
 Handler handler = new Handler();
 Collision coll = new Collision(handler);
@@ -16,7 +16,7 @@ void setup() {
   //handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
   handler.addObject(player = new Player("hitler", x, y, ID.Player, 30, 30));
   handler.addObject(new BasicEnemy(50,50,ID.Enemy, 16, 16));
-  handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Player, 5, 15));
+  handler.addObject(gun = new Gun(player.getX()+15, player.getY()-15, ID.Player, 5, 15));
   System.out.println(player.getName());
 }
 void draw() {

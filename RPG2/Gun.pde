@@ -1,5 +1,5 @@
-class Sword extends GameObject{
-   public Sword(int x, int y, ID id, int xSize, int ySize) {
+class Gun extends GameObject{
+   public Gun(int x, int y, ID id, int xSize, int ySize) {
       super(x, y, id, xSize, ySize);
   }  
   
