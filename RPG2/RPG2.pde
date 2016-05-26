@@ -5,6 +5,7 @@ Player player;
 Gun gun;
 PImage background;
 Handler handler = new Handler();
+private Level level = new Level();
 Collision coll = new Collision(handler);
 
 void setup() {
@@ -15,7 +16,6 @@ void setup() {
   //Testing enemies atm
   //handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
   handler.addObject(player = new Player("hitler", x, y, ID.Player, 30, 30));
-  handler.addObject(new BasicEnemy(50,50,ID.Enemy, 16, 16));
   handler.addObject(gun = new Gun(player.getX()+15, player.getY()-15, ID.Player, 5, 15));
   System.out.println(player.getName());
 }

@@ -3,11 +3,13 @@ import java.util.ArrayList;
 public class Handler {
   public ArrayList<GameObject> object = new ArrayList<GameObject>();
   
+  
     public void tick() {
     for(int i = 0; i < object.size(); i++) {
       GameObject tempObject = object.get(i);
       
       tempObject.tick();
+      
       
     }
   }

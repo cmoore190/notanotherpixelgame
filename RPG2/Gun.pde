@@ -15,6 +15,17 @@ class Gun extends GameObject{
   public void tick(){ 
     //Remove the velocity to add a swaying effect
     fill(255,255,255);
+    
+    for(int i = 0; i < handler.object.size(); i++) 
+    {
+      GameObject temp = handler.object.get(i);
+      if(coll.checkColl(gun, temp) && temp.getID() == ID.Enemy){
+      handler.removeObject(temp);
+      gun.setAvailable(true);
+      }
+    }
+    
+    
     if(isAvailable()){
     rect(player.getX() + 13 - player.getVelX(), player.getY() - 8 - player.getVelY(), 5, 8);
     super.setX(player.getX() + 13 - player.getVelX());

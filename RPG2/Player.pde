@@ -15,13 +15,7 @@ class Player extends GameObject{
     player.setX(RPG2.clamp(x, 0, width - 30));
     player.setY(RPG2.clamp(y, 0, height - 28));
     text(name + ":"+ lifes, player.getX() - velX - 10, player.getY() - velY+(2*size+10));
-    GameObject obj = coll.getClosestWTag(gun, ID.Enemy);
-    if(obj == null)
-    obj = gun;
-    if(coll.checkColl(gun, obj) && obj != gun){
-      handler.removeObject(obj);
-      gun.setAvailable(true);
-    }
+
 
   }
   
