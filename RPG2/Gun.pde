@@ -20,9 +20,14 @@ class Gun extends GameObject{
     {
       GameObject temp = handler.object.get(i);
       if(coll.checkColl(gun, temp) && temp.getID() == ID.Enemy){
-      handler.removeObject(temp);
-      gun.setAvailable(true);
+        handler.removeObject(temp);
+        gun.setAvailable(true);
       }
+      
+      if(coll.checkColl(gun, temp) && temp.getID() == ID.Wall){
+        gun.setAvailable(true);
+      }
+      
     }
     
     
