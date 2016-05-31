@@ -5,6 +5,7 @@ Player player;
 Gun gun;
 PImage background;
 Handler handler = new Handler();
+private Level level = new Level();
 Collision coll = new Collision(handler);
 
 void setup() {
@@ -15,7 +16,6 @@ void setup() {
   //Testing enemies atm
   //handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
   handler.addObject(player = new Player("hitler", x, y, ID.Player, 30, 30));
-  handler.addObject(new BasicEnemy(50,50,ID.Enemy, 16, 16));
   handler.addObject(gun = new Gun(player.getX()+15, player.getY()-15, ID.Player, 5, 15));
   System.out.println(player.getName());
 }
@@ -31,7 +31,13 @@ void keyPressed() {
   if(keyCode == 65 && !keyDown[2]) {player.setVelX(-3); keyDown[2] = true;}
   if(keyCode == 68 && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
   if(keyCode == LEFT){}
+<<<<<<< HEAD
   if(keyCode == 32){gun.Available(false); System.out.println("asd");}
+=======
+  //if(keyCode == 32){handler.removeObjectsWTag(ID.Player);}
+  if(keyCode == 32){gun.setAvailable(false);}
+  
+>>>>>>> FETCH_HEAD
 }
 
 void keyReleased() {

@@ -6,11 +6,9 @@ class BasicEnemy extends GameObject{
   }
   public void tick(){
     fill(255,0,0);
-    x += velX;
-    y += velY;
-   
     
     rect(x,y,size,size);
+    text(getX() + ","+ getY() + "", getX() + 8, getY() +(2*size+10));
 
   }
 }
