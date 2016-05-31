@@ -15,7 +15,7 @@ void setup() {
   frameRate(60);;
   //Testing enemies atm
   //handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
-  handler.addObject(player = new Player("hitler", x, y, ID.Player, 30, 30));
+  handler.addObject(player = new Player("Dude", x, y, ID.Player, 30, 30));
   handler.addObject(gun = new Gun(player.getX()+15, player.getY()-15, ID.Player, 5, 15));
   System.out.println(player.getName());
 }
