@@ -9,6 +9,7 @@ class BasicEnemy extends GameObject{
     
     rect(x,y,size,size);
     text(getX() + ","+ getY() + "", getX() + 8, getY() +(2*size+10));
+    
 
   }
 }
