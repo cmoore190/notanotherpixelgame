@@ -1,5 +1,5 @@
 int velX = 0, velY = 0;
-int x = 250, y = 250;
+int x = 250, y = 425;
 boolean[] keyDown  = new boolean[]{false, false, false, false};
 Player player;
 Gun gun;
@@ -26,8 +26,8 @@ void draw() {
 }
 
 void keyPressed() {
-  if(keyCode == 87 && !keyDown[0]) {player.setVelY(-3); keyDown[0] = true;}
-  if(keyCode == 83 && !keyDown[1]) {player.setVelY(3); keyDown[1] = true;}
+  //if(keyCode == 87 && !keyDown[0]) {player.setVelY(-3); keyDown[0] = true;}
+  //if(keyCode == 83 && !keyDown[1]) {player.setVelY(3); keyDown[1] = true;}
   if(keyCode == 65 && !keyDown[2]) {player.setVelX(-3); keyDown[2] = true;}
   if(keyCode == 68 && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
   if(keyCode == LEFT){}
@@ -39,8 +39,8 @@ void keyPressed() {
 }
 
 void keyReleased() {
-  if(keyCode == 87) {player.setVelY(0); keyDown[0] = false;} 
-  if(keyCode == 83) {player.setVelY(0); keyDown[1] = false;} 
+  //if(keyCode == 87) {player.setVelY(0); keyDown[0] = false;} 
+  //if(keyCode == 83) {player.setVelY(0); keyDown[1] = false;} 
   if(keyCode == 65) {player.setVelX(0); keyDown[2] = false;}
   if(keyCode == 68) {player.setVelX(0); keyDown[3] = false;} 
 }

@@ -11,5 +11,8 @@ public class Level{
         handler.addObject(j);
         
         handler.addObject(new Wall(400,400,ID.Wall, 60,5));
+        handler.addObject(new Wall(300,400,ID.Wall, 60,5));
+        handler.addObject(new Wall(200,400,ID.Wall, 60,5));
+        handler.addObject(new Wall(100,400,ID.Wall, 60,5));
   }
 }
