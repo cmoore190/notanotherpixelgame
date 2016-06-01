@@ -18,7 +18,16 @@ class Player extends GameObject{
 
     //text(name + ":"+ Lives, player.getX() - velX - 10, player.getY() - velY+(2*size+10));  
     text(name + ":"+ lifes, player.getX() - velX - 10, player.getY() - velY+(2*size+10));
-
+ for(int i = 0; i < handler.object.size(); i++) 
+    {
+      GameObject temp = handler.object.get(i);
+      if(coll.checkColl(player, temp) && temp.getID() == ID.Enemy){
+        handler.removeObject(temp);
+        lifes--;
+        player.setX(10);
+      }
+      
+    }
 
 
   }
