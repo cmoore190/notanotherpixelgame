@@ -41,10 +41,6 @@ class Gun extends GameObject{
         gun.setAvailable(true);
       }
       
-      if(coll.checkColl(gun, temp) && temp.getID() == ID.Wall){
-        gun.setAvailable(true);
-      }
-      
     }
     
     
