@@ -4,6 +4,8 @@ public abstract class GameObject {
   protected int velX, velY;
   protected int xSize;
   protected int ySize;
+  protected int hitpoints;
+  protected int r,g,b;
   protected boolean Available;
   
   public GameObject(int x, int y, ID id, int xSize, int ySize) {
