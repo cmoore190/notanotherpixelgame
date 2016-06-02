@@ -11,7 +11,7 @@ public class Inventory
   {
      String name = item.getName();
      ArrayList<Item> itemGroup = items.get(name);
-     if(itemGroup==null) // add a new group, if none exist, yet
+     if(itemGroup==null) // add a new group, if none exist
      {
        itemGroup = new ArrayList<Item>();
        items.put(name,itemGroup);
