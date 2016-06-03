@@ -1,4 +1,4 @@
-
+public int loss=3;
 public static int size = 16;
 class BasicEnemy extends GameObject{
   public BasicEnemy(int x, int y, ID id, int xSize, int ySize) {
@@ -11,6 +11,12 @@ class BasicEnemy extends GameObject{
     rect(x,y,size,size);
     text(getX() + ","+ getY() + "", getX() + 8, getY() +(2*size+10));
     y+=velY;
+    if(getY() > height){
+      loss--;
+    }
+    if(loss<=0){
 
+    }
+  
   }
 }

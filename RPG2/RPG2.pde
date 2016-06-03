@@ -22,6 +22,7 @@ void setup() {
 void draw() {
   background(background); //Greyish color
   handler.tick();
+  level.tick();
   //System.out.println(frameRate);
 }
 
