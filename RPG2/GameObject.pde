@@ -55,7 +55,15 @@ public abstract class GameObject {
     return ySize;
   }
   public void Available(boolean statement){
-    Available = statement;
+    this.Available = statement;
+  }
+  
+  public void setHitpoints(int value) {
+    this.hitpoints = value;
+  }
+  
+  public int getHitpoints(){
+    return hitpoints;
   }
   
   public boolean isAvailable(){
