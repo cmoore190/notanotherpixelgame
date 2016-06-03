@@ -38,3 +38,4 @@ public class Level{
       amtEnemiesPLevel+=2;
     
   }
+}
