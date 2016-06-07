@@ -13,10 +13,40 @@ public class Level{
         //handler.addObject(j);
         
     
-        handler.addObject(new Wall(400,380,ID.Wall, 60,5));
-        handler.addObject(new Wall(300,400,ID.Wall, 60,5));
-        handler.addObject(new Wall(200,400,ID.Wall, 60,5));
-        handler.addObject(new Wall(100,400,ID.Wall, 60,5));
+        handler.addObject(new Wall(375,380,ID.Wall, 50,5));
+        handler.addObject(new Wall(250,380,ID.Wall, 50,5));
+        handler.addObject(new Wall(125,380,ID.Wall, 50,5));
+        
+        //First Row
+        handler.addObject(new BasicEnemy(50,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(80,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(110,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(140,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(170,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(200,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(230,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(260,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(290,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(320,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(350,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(380,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(410,50,ID.Enemy,30,30,true));
+        handler.addObject(new BasicEnemy(440,50,ID.Enemy,30,30,true));
+        //Second Row
+        handler.addObject(new BasicEnemy(50,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(80,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(110,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(140,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(170,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(200,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(230,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(260,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(290,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(320,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(350,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(380,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(410,80,ID.Enemy,30,30,false));
+        handler.addObject(new BasicEnemy(440,80,ID.Enemy,30,30,false));
         
     
     }
