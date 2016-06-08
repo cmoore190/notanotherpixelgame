@@ -8,6 +8,7 @@ public abstract class GameObject {
   protected int r,g,b;
   protected boolean Available;
   protected boolean right = true;
+  protected Random random = new Random();
   
   public GameObject(int x, int y, ID id, int xSize, int ySize) {
     this.x = x;

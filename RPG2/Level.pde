@@ -33,7 +33,7 @@ public class Level{
         handler.addObject(new BasicEnemy(410,50,ID.Enemy,30,30,true));
         handler.addObject(new BasicEnemy(440,50,ID.Enemy,30,30,true));
         //Second Row
-        handler.addObject(new BasicEnemy(50,80,ID.Enemy,30,30,false));
+        //handler.addObject(new BasicEnemy(50,80,ID.Enemy,30,30,false));
         handler.addObject(new BasicEnemy(80,80,ID.Enemy,30,30,false));
         handler.addObject(new BasicEnemy(110,80,ID.Enemy,30,30,false));
         handler.addObject(new BasicEnemy(140,80,ID.Enemy,30,30,false));
