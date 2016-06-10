@@ -1,4 +1,5 @@
 public class Level {
+  int level = 0;
     public Level() {           
       handler.addObject(new Wall(375, 380, ID.Wall, 50, 5));
       handler.addObject(new Wall(250, 380, ID.Wall, 50, 5));
@@ -78,3 +79,4 @@ public class Level {
         state = 2;
       }
     }
+}

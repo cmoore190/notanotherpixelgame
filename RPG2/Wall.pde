@@ -13,20 +13,20 @@ class Wall extends GameObject {
 
     for (int i = 0; i < handler.object.size(); i++) {
       GameObject temp = handler.object.get(i);
-      if((coll.checkColl(this,temp))){
-        if(temp.getID() == ID.EnemyBullet){
-        handler.removeObject(temp);
-        this.hitpoints--;
-        this.g -= 30;
+      if ((coll.checkColl(this, temp))) {
+        if (temp.getID() == ID.EnemyBullet) {
+          handler.removeObject(temp);
+          this.hitpoints--;
+          this.g -= 30;
         }
-        if(temp.getID() == ID.Player){
-        gun.setAvailable(true);
-        this.hitpoints--;
-        this.g -= 30;
+        if (temp.getID() == ID.Player) {
+          gun.setAvailable(true);
+          this.hitpoints--;
+          this.g -= 30;
         }
       }
-        
-      if(this.hitpoints <= 0)
+
+      if (this.hitpoints <= 0)
         handler.removeObject(this);
     }
   }

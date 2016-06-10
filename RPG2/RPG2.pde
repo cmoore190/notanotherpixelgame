@@ -10,9 +10,9 @@ Level level;
 Collision coll = new Collision(handler);
 
 void setup() {
-  size(500,500);
+  size(500, 500);
   background = loadImage("https://newevolutiondesigns.com/images/freebies/space-wallpaper-29.jpg");
-  background.resize(500,500);
+  background.resize(500, 500);
   frameRate(60);
   //Testing enemies atm
   //handler.addObject(sword = new Sword(player.getX()+15, player.getY()-15, ID.Sword));
@@ -23,13 +23,13 @@ void setup() {
 }
 void draw() {
   background(background);
-  if(state == 0){//Greyish color
-  handler.tick();
-  level.tick();
-  }else if (state == 1){
-    text("GAMEOVER", width / 2 , height / 2);
-  }else if(state == 2){
-    text("YOU WIN!!!!!", width / 2 , height / 2);
+  if (state == 0) {//Greyish color
+    handler.tick();
+    level.tick();
+  } else if (state == 1) {
+    text("GAMEOVER", width / 2, height / 2);
+  } else if (state == 2) {
+    text("YOU WIN!!!!!", width / 2, height / 2);
   }
   //System.out.println(frameRate);
 }
@@ -37,28 +37,44 @@ void draw() {
 void keyPressed() {
   //if(keyCode == 87 && !keyDown[0]) {player.setVelY(-3); keyDown[0] = true;}
   //if(keyCode == 83 && !keyDown[1]) {player.setVelY(3); keyDown[1] = true;}
-  if(keyCode == 65 && !keyDown[2]) {player.setVelX(-3); keyDown[2] = true;}
-  if(keyCode == 68 && !keyDown[3]) {player.setVelX(3); keyDown[3] = true;}
-  if(keyCode == LEFT){}
-  if(keyCode == 32){gun.Available(false); System.out.println("asd");}
+  if (keyCode == 65 && !keyDown[2]) {
+    player.setVelX(-3); 
+    keyDown[2] = true;
+  }
+  if (keyCode == 68 && !keyDown[3]) {
+    player.setVelX(3); 
+    keyDown[3] = true;
+  }
+  if (keyCode == LEFT) {
+  }
+  if (keyCode == 32) {
+    gun.Available(false); 
+    System.out.println("asd");
+  }
   //if(keyCode == 32){handler.removeObjectsWTag(ID.Player);}
-  if(keyCode == 32){gun.setAvailable(false);}
-  
-
+  if (keyCode == 32) {
+    gun.setAvailable(false);
+  }
 }
 
 void keyReleased() {
   //if(keyCode == 87) {player.setVelY(0); keyDown[0] = false;} 
   //if(keyCode == 83) {player.setVelY(0); keyDown[1] = false;} 
-  if(keyCode == 65) {player.setVelX(0); keyDown[2] = false;}
-  if(keyCode == 68) {player.setVelX(0); keyDown[3] = false;} 
+  if (keyCode == 65) {
+    player.setVelX(0); 
+    keyDown[2] = false;
+  }
+  if (keyCode == 68) {
+    player.setVelX(0); 
+    keyDown[3] = false;
+  }
 }
 
 public static int clamp(int val, int min, int max) {
-    if(val >= max)
-      return max;
-    else if(val <= min)
-      return min;
-    else
-      return val;
-  }
+  if (val >= max)
+    return max;
+  else if (val <= min)
+    return min;
+  else
+    return val;
+}
