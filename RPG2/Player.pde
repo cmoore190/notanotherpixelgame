@@ -21,10 +21,11 @@ class Player extends GameObject{
  for(int i = 0; i < handler.object.size(); i++) 
     {
       GameObject temp = handler.object.get(i);
-      if(coll.checkColl(player, temp) && temp.getID() == ID.Enemy){
+      if(coll.checkColl(player, temp) && temp.getID() == ID.EnemyBullet){
         handler.removeObject(temp);
         lifes--;
         player.setX(10);
+        handler.removeObjectsWTag(ID.EnemyBullet);
       }
       
     }
