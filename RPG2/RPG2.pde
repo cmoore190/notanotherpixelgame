@@ -1,5 +1,6 @@
 int velX = 0, velY = 0;
 int x = 250, y = 425;
+int state = 0;
 boolean[] keyDown  = new boolean[]{false, false, false, false};
 Player player;
 Gun gun;
@@ -21,9 +22,15 @@ void setup() {
   System.out.println(player.getName());
 }
 void draw() {
-  background(background); //Greyish color
+  background(background);
+  if(state == 0){//Greyish color
   handler.tick();
   level.tick();
+  }else if (state == 1){
+    text("GAMEOVER", width / 2 , height / 2);
+  }else if(state == 2){
+    text("YOU WIN!!!!!", width / 2 , height / 2);
+  }
   //System.out.println(frameRate);
 }
 

@@ -29,6 +29,10 @@ class Player extends GameObject{
       }
       
     }
+    
+    if(lifes == 0){
+    state = 1;
+  }
 
 
   }

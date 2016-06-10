@@ -5,13 +5,8 @@
    }
   public void tick(){
     fill(255,0,0);
-    rect(x,y,xSize,ySize);
+    rect(x,y,this.xSize,this.ySize);
     y += velY;
     
-    for(int i = 0; i < handler.object.size(); i++){
-      GameObject temp = handler.object.get(i);
-      if((coll.checkColl(this,temp)) && (temp.getID() == ID.Player))
-        handler.removeObjectsWTag(ID.EnemyBullet);
-    }
   }
 }

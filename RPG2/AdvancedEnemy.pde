@@ -1,10 +1,6 @@
-public int loss=3;
-public static int size = 16;
-int highest = 0;
 
-
-class BasicEnemy extends GameObject{
-  public BasicEnemy(int x, int y, ID id, int xSize, int ySize, boolean side) {
+class AdvancedEnemy extends GameObject{
+  public AdvancedEnemy(int x, int y, ID id, int xSize, int ySize, boolean side) {
     super(x,y,id, xSize, ySize);
     super.Available(true);
     super.right = side;
@@ -21,9 +17,6 @@ class BasicEnemy extends GameObject{
     this.x += velX;
     this.y += velY;
     super.g = this.random.nextInt(200) + 1;
-        if(y > highest){
-      highest = y;
-    }
     if((getX() >= width - 50 || getX() <= 50) && isAvailable() == true){
       this.velX = 0;
       this.velY = 1;
@@ -48,10 +41,9 @@ class BasicEnemy extends GameObject{
       }
     }
     
-    if(y == highest && g == 200){
+    if(g == 200){
       handler.addObject(new EnemyBullet(x + xSize ,y,ID.EnemyBullet,6,6));
     }
-    
   
   }
 }
