@@ -1,28 +1,26 @@
 public class Level {
-  private int level = 0;
-
-  public Level() {           
-    handler.addObject(new Wall(375, 380, ID.Wall, 50, 5));
-    handler.addObject(new Wall(250, 380, ID.Wall, 50, 5));
-    handler.addObject(new Wall(125, 380, ID.Wall, 50, 5));
-  }
-
-  public void tick() {
-    int count = 0;
-    for (int i = 0; i < handler.object.size(); i++) {
-      GameObject temp = handler.object.get(i);
-      if (temp.getID() == ID.Enemy)
-        count++;
+    public Level() {           
+      handler.addObject(new Wall(375, 380, ID.Wall, 50, 5));
+      handler.addObject(new Wall(250, 380, ID.Wall, 50, 5));
+      handler.addObject(new Wall(125, 380, ID.Wall, 50, 5));
     }
-    if (count == 0) {
-      addEnemies();
-      level++;
+
+    public void tick() {
+      int count = 0;
+      for (int i = 0; i < handler.object.size(); i++) {
+        GameObject temp = handler.object.get(i);
+        if (temp.getID() == ID.Enemy)
+          count++;
+      }
+      if (count == 0) {
+        addEnemies();
+        level++;
+      }
     }
-  }
 
-  public void addEnemies() {
+    public void addEnemies() {
 
-        if(level == 0){
+      if (level == 0) {
         handler.addObject(new BasicEnemy(50, 50, ID.Enemy, 30, 30, true));
         handler.addObject(new BasicEnemy(80, 50, ID.Enemy, 30, 30, true));
         handler.addObject(new BasicEnemy(110, 50, ID.Enemy, 30, 30, true));
@@ -52,7 +50,7 @@ public class Level {
         handler.addObject(new BasicEnemy(380, 80, ID.Enemy, 30, 30, false));
         handler.addObject(new BasicEnemy(410, 80, ID.Enemy, 30, 30, false));
         handler.addObject(new BasicEnemy(440, 80, ID.Enemy, 30, 30, false));
-        }else if(level == 1){
+      } else if (level == 1) {
         handler.addObject(new AdvancedEnemy(50, 50, ID.Enemy, 10, 10, true));
         handler.addObject(new AdvancedEnemy(60, 60, ID.Enemy, 10, 10, true));
         handler.addObject(new AdvancedEnemy(70, 70, ID.Enemy, 10, 10, true));
@@ -63,7 +61,7 @@ public class Level {
         handler.addObject(new AdvancedEnemy(120, 120, ID.Enemy, 10, 10, true));
         handler.addObject(new AdvancedEnemy(130, 130, ID.Enemy, 10, 10, true));
         handler.addObject(new AdvancedEnemy(140, 140, ID.Enemy, 10, 10, true));
-        
+
         handler.addObject(new AdvancedEnemy(width - 70, 50, ID.Enemy, 10, 10, false));
         handler.addObject(new AdvancedEnemy(width - 80, 60, ID.Enemy, 10, 10, false));
         handler.addObject(new AdvancedEnemy(width - 90, 70, ID.Enemy, 10, 10, false));
@@ -74,13 +72,9 @@ public class Level {
         handler.addObject(new AdvancedEnemy(width - 140, 120, ID.Enemy, 10, 10, false));
         handler.addObject(new AdvancedEnemy(width - 150, 130, ID.Enemy, 10, 10, false));
         handler.addObject(new AdvancedEnemy(width - 160, 140, ID.Enemy, 10, 10, false));
-        }
-        else if(level == 2){
-          handler.addObject(new Boss(50,50, ID.Enemy, 60,60));
-        }else if(level == 3){
+      } else if (level == 2) {
+        handler.addObject(new Boss(50, 50, ID.Enemy, 60, 60));
+      } else if (level == 3) {
         state = 2;
       }
-        
-        
-  }
-}
+    }
