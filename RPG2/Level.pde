@@ -1,6 +1,6 @@
 public class Level {
   private ArrayList<BasicEnemy> basicEnemies = new ArrayList<BasicEnemy>();
-  private int amtEnemiesPLevel=4;
+  private int amtEnemiesPLevel=50;
   public Level() {           
 
     addEnemies();
@@ -23,6 +23,7 @@ public class Level {
     handler.addObject(new Wall(125, 380, ID.Wall, 50, 5));
 
     //First Row
+    /*
     handler.addObject(new BasicEnemy(50, 50, ID.Enemy, 30, 30, true));
     handler.addObject(new BasicEnemy(80, 50, ID.Enemy, 30, 30, true));
     handler.addObject(new BasicEnemy(110, 50, ID.Enemy, 30, 30, true));
@@ -52,6 +53,7 @@ public class Level {
     handler.addObject(new BasicEnemy(380, 80, ID.Enemy, 30, 30, false));
     handler.addObject(new BasicEnemy(410, 80, ID.Enemy, 30, 30, false));
     handler.addObject(new BasicEnemy(440, 80, ID.Enemy, 30, 30, false));
+    */
   }
   public void tick() {
     int eCount=amtEnemiesPLevel;
@@ -59,20 +61,22 @@ public class Level {
       GameObject temp = handler.object.get(i);
       if (temp.getID() == ID.Enemy && eCount > 0) {
         eCount--;
+        System.out.println(eCount);
       }
       if (eCount==0) {
         amtEnemiesPLevel++;
         eCount=amtEnemiesPLevel;
-        addEnemies();
+        //addEnemies();
       }
     }
-  }
+ }
   public void addEnemies() {
     for (int i = 0; i < amtEnemiesPLevel; i++) {
-      handler.addObject(new BasicEnemy(i * 10 + 10, i * 10 + 10, ID.Enemy, 8, 8, true));
+      basicEnemies.add(new BasicEnemy(i * 10 + 10, i, ID.Enemy, 8, 8, true));
+      
       // System.out.println(basicEnemies.get(i).getX());
     }
-
+  
     for (GameObject j : basicEnemies) 
       handler.addObject(j);
   }
