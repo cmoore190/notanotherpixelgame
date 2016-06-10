@@ -49,7 +49,7 @@ class BasicEnemy extends GameObject{
     }
     
     if(y == highest && g == 200){
-      handler.addObject(new EnemyBullet(x + xSize / 2,y,ID.EnemyBullet,6,6));
+      handler.addObject(new EnemyBullet(x + xSize ,y,ID.EnemyBullet,6,6));
     }
     
     

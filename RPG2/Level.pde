@@ -50,19 +50,6 @@ public class Level {
   }
 
   public void tick() {
-    /*  
-     for (int i = 0; i < handler.object.size(); i++) {
-     GameObject temp = handler.object.get(i);
-     if (temp.getID() == ID.Enemy && eCount > 0) {
-     eCount--;
-     }
-     if (eCount==0) {
-     amtEnemiesPLevel++;
-     eCount=amtEnemiesPLevel;
-     addEnemies();
-     }
-     }
-     */
     int count = 0;
     for (int i = 0; i < handler.object.size(); i++) {
       GameObject temp = handler.object.get(i);
